@@ -203,6 +203,7 @@
         for (i in params) {
             if (params[i].name.split("_")[0] == "values") {
                 params[i].name = params[i].name.split("_")[0] + "[" + params[i].name.split("_")[1] + "]"; 
+                params[i].value = encodeURIComponent(params[i].value);
             }
         }
 
